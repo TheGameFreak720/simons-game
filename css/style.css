@@ -27,24 +27,40 @@ body {
     z-index: 8;
 }
 
-#red {
+.red {
     background-color: red;
     border-radius: 0 300px 0 0;
 }
 
-#blue {
+.blue {
     background-color: blue;
     border-radius: 0 0 300px 0;
 }
 
-#yellow {
+.yellow {
     background-color: yellow;
     border-radius: 0 0 0 300px;
 }
 
-#green {
+.green {
     background-color: green;
     border-radius: 300px 0 0 0;
+}
+
+.red-active {
+    background-color: darkred;
+}
+
+.blue-active {
+    background-color: darkblue;
+}
+
+.yellow-active {
+    background-color: darkgoldenrod;
+}
+
+.green-active {
+    background-color: darkgreen;
 }
 
 .controls {
