@@ -115,6 +115,7 @@ body {
 
 .start-btn {
     background-color: red;
+    cursor: pointer;
 }
 
 .strict-btn {
