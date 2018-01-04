@@ -18,9 +18,16 @@ var boardSound = [
 
 $(document).ready(function() {
 
+    $('.display').text('');
+
     //Initialize board sequence
     $('.start-btn').click(function() {
+        strict = false;
+        error = false;
+        level = 0;
         level++;
+        simonSeq = [];
+        userSeq = [];
         simonSequence();
     });
 
@@ -48,14 +55,40 @@ $(document).ready(function() {
            $('.display').text('WIN');
        }
     });
+
+    //strict mode listener
+    $(".strict-btn").click(function() {
+        level = 0;
+        level++;
+        simonSeq = [];
+        userSeq = [];
+        strict = true;
+        simonSequence();
+    });
+
+    //listener for switch button
+    $(".switch").click(function() {
+        gameOn = (gameOn == false) ? true : false;
+        console.log(gameOn);
+        if(gameOn) {
+            $(".inner-switch").addClass("inner-inactive");
+            $(".switch").addClass("outer-active");
+            $(".display").text("00")
+        }
+        else {
+            $(".inner-switch").removeClass("inner-inactive");
+            $(".switch").removeClass("outer-active");
+            $(".display").text("");
+        }
+    });
 });
 
 function checkUserSeq() {
     for (var i = 0; i < userSeq.length; i++) {
         if (userSeq[i] != simonSeq[i]) {
-            error = false;
+            return false;
         } else {
-            error = true;
+            return true;
         }
     }
 }
