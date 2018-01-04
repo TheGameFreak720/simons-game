@@ -127,14 +127,22 @@ body {
 
 .outer-switch {
     width: 60px;
-    height: 30px;
+    height: 29px;
     border: solid 2px black;
     background-color: black;
 }
 
+.outer-active {
+    background-color: gray !important;
+}
+
 .inner-switch {
-    margin: 0;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 25px;
     background-color: grey;
+    position: relative !important;
+}
+
+.inner-inactive {
+    background-color: black !important;
 }

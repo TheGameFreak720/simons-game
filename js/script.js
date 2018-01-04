@@ -5,6 +5,9 @@ var id;
 var color;
 var level = 0;
 var error;
+var strict = false;
+//switch to turn game on or off
+var gameOn = false;
 
 var boardSound = [
     'https://s3.amazonaws.com/freecodecamp/simonSound1.mp3', //green
