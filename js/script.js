@@ -1,6 +1,6 @@
 var userSeq = [];
 var simonSeq = [];
-const NUM_OF_LEVELS = 3;
+const NUM_OF_LEVELS = 20;
 var id;
 var color;
 var level = 0;
